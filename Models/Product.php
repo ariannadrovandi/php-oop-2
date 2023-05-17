@@ -1,9 +1,5 @@
 <?php
-/**
- * Class Product
- */
-class Product
-{
+class Product{
     public string $title;
     public int $price;
     public string $image;
