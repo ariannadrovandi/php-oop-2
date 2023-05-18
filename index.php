@@ -3,10 +3,25 @@
 <?php
 include __DIR__ .'/Database/db.php';
 include __DIR__.'/View/header.php';
+
+
+
 ?>
 
 <main class="container">
-   <div class="row">
+<div>
+        <?php 
+            var_dump($persona);
+            echo $persona->getWeight();
+        ?>
+    </div>
+    <div>
+        <?php 
+            var_dump($cibo);
+            echo $cibo->getWeight();
+        ?>
+    </div>
+    <div class="row">
         <?php foreach ($products as $product) :?>
             <div class="col-6">
                 <div class="card m-3">

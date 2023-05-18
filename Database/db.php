@@ -1,5 +1,7 @@
 <?php
 include __DIR__ . '/../Models/ProductType.php';
+include __DIR__.'/../Models/Person.php';
+include __DIR__.'/../Models/DogFood.php';
 
 
 $products = [
@@ -10,5 +12,12 @@ $products = [
     new ProductType ('Cuccia per cani', 40, 'https://www.omlet.it/images/cache/512/512/topology-medium-memory-foam-dog-bed-with-grey-microfibre-topper-and-wooden-feet-kit.jpg', 'dog', new Category('kennel', 'cuccia')),
     new ProductType ('Cuccia per gatti', 20, 'https://i.ebayimg.com/images/g/DJAAAOSwwDdjBNgj/s-l1600.jpg', 'cat', new Category('kennel', 'cuccia'))
 ];
+
+$cibo = new DogFood ('Crocchette', 20, 'https://images.eprice.it/nobrand/0/Lightbox/637/301584637/a73e4b2e20023fb53b936c6e4913f208.jpg', 'secco', '30/12/2024', 'Pollo');
+
+$cibo->setWeight(1, 'kg');
+
+$persona = new Person (1.80);
+$persona->setWeight(70, 'kg');
 
 ?>
