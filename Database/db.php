@@ -14,8 +14,13 @@ $products = [
 ];
 
 $cibo = new DogFood ('Crocchette', 20, 'https://images.eprice.it/nobrand/0/Lightbox/637/301584637/a73e4b2e20023fb53b936c6e4913f208.jpg', 'secco', '30/12/2024', 'Pollo');
-
 $cibo->setWeight(1, 'kg');
+
+try{
+    $cibo->setWeight('aaa', 'kg');
+} catch(Exception $e) {
+    echo 'Eccezione:' . $e->getMessage();
+};
 
 $persona = new Person (1.80);
 $persona->setWeight(70, 'kg');
